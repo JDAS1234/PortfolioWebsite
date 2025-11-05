@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jules Da Silva Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+  <header>
+    <h1 class="logo">Jules<span>Dev</span></h1>
+    <nav>
+      <a href="#home" class="active">Home</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-content" data-aos="fade-up">
+      <h3>Hi, I’m <span>Jules</span></h3>
+      <h1>Game Developer & Programmer</h1>
+      <p>Passionate about designing and developing engaging interactive experiences using Unity, C#, and Java.</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h1 data-aos="fade-up">Some of my <span>Skills</span></h1>
+    <div class="container" data-aos="fade-up">
+      <div class="skill-box">
+        <p>Unity</p>
+        <div class="skill unity" data-width="90%"></div>
+      </div>
+      <div class="skill-box">
+        <p>C#</p>
+        <div class="skill csharp" data-width="85%"></div>
+      </div>
+      <div class="skill-box">
+        <p>Java</p>
+        <div class="skill java" data-width="80%"></div>
+      </div>
+      <div class="skill-box">
+        <p>HTML/CSS</p>
+        <div class="skill htmlcss" data-width="75%"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h1 data-aos="fade-up">My <span>Projects</span></h1>
+    <div class="project-container" data-aos="zoom-in">
+      <div class="content">
+        <h2>Keyboard Builder</h2>
+        <p>A 2D Unity game where players design and assemble mechanical keyboards.</p>
+      </div>
+      <div class="content">
+        <h2>Platformer Prototype</h2>
+        <p>Physics-based game built in Unity with custom character controls.</p>
+      </div>
+      <div class="content">
+        <h2>Portfolio Website</h2>
+        <p>This site — designed and built from scratch with HTML, CSS, and JS!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" data-aos="fade-up">
+    <h1>Contact <span>Me</span></h1>
+    <p>Have a project or just want to chat? Let’s connect!</p>
+    <a href="mailto:jules@example.com" class="btn">Email Me</a>
+  </section>
+
+  <button id="scrollTop">↑</button>
+
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.0/dist/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
