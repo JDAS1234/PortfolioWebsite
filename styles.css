@@ -178,6 +178,10 @@ h1 span {
     transition: transform 0.4s ease;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
+a.content{
+    text-decoration: none;
+    color: inherit;
+}
 
 .content:hover {
     transform: perspective(600px) rotateY(5deg);
