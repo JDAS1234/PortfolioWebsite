@@ -13,20 +13,33 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 skills.forEach(el => observer.observe(el));
 
-// Active nav highlight on scroll
+// Update active nav link on scroll
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('nav a');
-window.addEventListener('scroll', () => {
+
+function updateActiveLink() {
   let current = '';
+  let minDistance = window.innerHeight; // start with max distance
+
   sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    if (scrollY >= sectionTop - 200) current = section.getAttribute('id');
+    const rect = section.getBoundingClientRect();
+    const distance = Math.abs(rect.top - 80); // 80 = header height
+    if (distance < minDistance) {
+      minDistance = distance;
+      current = section.getAttribute('id');
+    }
   });
+
   navLinks.forEach(a => {
     a.classList.remove('active');
     if (a.getAttribute('href').includes(current)) a.classList.add('active');
   });
-});
+}
+
+window.addEventListener('scroll', updateActiveLink);
+updateActiveLink();
+
+
 
 // Scroll-to-top button
 const scrollTopBtn = document.getElementById('scrollTop');
@@ -43,3 +56,27 @@ VanillaTilt.init(document.querySelectorAll(".content"), {
   glare: true,
   "max-glare": 0.2
 });
+
+
+
+// Accordion for Experience Section
+const accordions = document.querySelectorAll('.accordion');
+accordions.forEach(acc => {
+  acc.addEventListener('click', () => {
+    // Toggle this panel
+    acc.classList.toggle('active');
+    const panel = acc.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+});
+
+
+
+
+
+
+
